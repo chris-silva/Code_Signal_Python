@@ -1,0 +1,2 @@
+def competitiveEating(t, width, precision):
+    return '{tVar:^{w}.{p}f}'.format(tVar=t, w=width, p=precision)

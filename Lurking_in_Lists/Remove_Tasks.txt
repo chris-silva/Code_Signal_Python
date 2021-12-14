@@ -1,0 +1,5 @@
+#https://stackoverflow.com/questions/12433695/extract-elements-of-list-at-odd-positions
+
+def removeTasks(k, toDo):
+    del toDo[k-1::k]
+    return toDo

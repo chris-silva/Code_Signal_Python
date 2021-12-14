@@ -1,0 +1,15 @@
+def newStyleFormatting(s):
+    jump = False
+    i = 0
+    for(a, b) in zip(s[0::1], s[1::1]):
+        if jump == True:
+            jump = False
+            continue
+        ch = a + b
+        if ch == "%%":
+            s = s.replace("%%", "%", 1)
+            jump = True
+        elif ch in ["%b", "%c", "%d", "%e", "%f", "%g", "%n", "%o", "%s", "%x"]:
+            s = s[0:i] + "{}" + s[i+2:]
+        i = i + 1
+    return s
